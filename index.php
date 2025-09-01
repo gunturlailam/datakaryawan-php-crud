@@ -404,10 +404,10 @@
                                             <td><?php echo $row['tanggal_masuk'] ?></td>
                                             <td><?php echo $row['no_hp'] ?></td>
                                             <td class="text-center">
-                                                <a href="edit-siswa.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-primary mr-2" title="Edit">
+                                                <a href="edit-karyawan.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-primary mr-2" title="Edit">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="hapus-siswa.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')" title="Hapus">
+                                                <a href="hapus-karyawan.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')" title="Hapus">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
