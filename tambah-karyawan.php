@@ -155,6 +155,105 @@
             font-weight: 400;
         }
         
+        /* Custom Select Dropdown Styling */
+        select[name="jabatan"] {
+            width: 100%;
+            padding: 18px 25px;
+            border: 3px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            color: #2d3748;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23667eea' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 20px center;
+            background-repeat: no-repeat;
+            background-size: 25px;
+            padding-right: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        select[name="jabatan"]:hover {
+            border-color: #cbd5e0;
+            background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        select[name="jabatan"]:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.15);
+            background: white;
+            transform: translateY(-3px) scale(1.02);
+            outline: none;
+        }
+        
+        select[name="jabatan"] option {
+            padding: 15px 20px;
+            background: white;
+            color: #2d3748;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        select[name="jabatan"] option:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        select[name="jabatan"] option:checked {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            font-weight: 700;
+        }
+        
+        /* Glow effect for selected option */
+        select[name="jabatan"]:focus {
+            box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.15), 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Animation for dropdown */
+        select[name="jabatan"] {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Custom scrollbar for dropdown */
+        select[name="jabatan"]::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        select[name="jabatan"]::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        select[name="jabatan"]::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+        }
+        
+        select[name="jabatan"]::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        
         select.form-control {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23667eea' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
             background-position: right 20px center;
@@ -346,19 +445,18 @@
                             </div>
 
                             <div class="form-group">
-                                <label></i>Jabatan</label>
-                                <div class="input-icon">
-                                    <select name="jabatan" class="form-control" placeholder="Pilih Jabatan">
-                                        <option value="Manager">Manager</option>
-                                        <option value="Supervisor">Supervisor</option>
-                                        <option value="Staff">Staff</option>
-                                        <option value="Admin">Admin</option>
-                                        <option value="Operator">Operator</option>
-                                        <option value="Driver">Driver</option>
-                                        <option value="Security">Security</option>
-                                        <option value="Cleaning Service">Cleaning Service</option>
-                                    </select>
-                                </div>
+                                <label><i class="fas fa-briefcase"></i>Jabatan</label>
+                                <select name="jabatan" required>
+                                    <option value="">-- Pilih Jabatan --</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Supervisor">Supervisor</option>
+                                    <option value="Staff">Staff</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Operator">Operator</option>
+                                    <option value="Driver">Driver</option>
+                                    <option value="Security">Security</option>
+                                    <option value="Cleaning Service">Cleaning Service</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -376,6 +474,7 @@
                                     <input type="tel" class="form-control" name="no_hp" placeholder="Masukkan NO HP">
                                 </div>
                             </div>
+
 
                             <div class="btn-group">
                                 <button type="submit" class="btn btn-success">
@@ -395,6 +494,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script>
+
 </body>
 
 </html>
