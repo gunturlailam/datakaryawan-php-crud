@@ -335,7 +335,7 @@
                         TAMBAH KARYAWAN
                     </div>
                     <div class="card-body">
-                        <form action="simpan-siswa.php" method="POST">
+                        <form action="simpan-karyawan.php" method="POST">
 
                             <div class="form-group">
                                 <label></i>Nama Karyawan</label>
@@ -373,7 +373,7 @@
                                 <label></i>No HP</label>
                                 <div class="input-icon">
                                     <i class="fas fa-phone"></i>
-                                    <input type="tel" class="form-control" name="alamat" placeholder="Masukkan NO HP">
+                                    <input type="tel" class="form-control" name="no_hp" placeholder="Masukkan NO HP">
                                 </div>
                             </div>
 
